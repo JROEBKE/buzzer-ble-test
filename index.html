@@ -15,5 +15,11 @@
   <p id="buttonState">Noch kein Tastendruck</p>
 
   <script src="buzzer.js"></script>
+  <p id="bluetoothSupport"></p>
+<script>
+  document.getElementById("bluetoothSupport").textContent =
+    "Web Bluetooth: " + (navigator.bluetooth ? "verfügbar" : "NICHT verfügbar") +
+    " | Sicherer Kontext: " + (window.isSecureContext ? "ja" : "nein");
+</script>
 </body>
 </html>
