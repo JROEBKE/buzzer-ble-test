@@ -11,8 +11,7 @@ connectButton.addEventListener("click", async () => {
     statusText.textContent = "1. Bluetooth-Suche wird gestartet …";
 
     const device = await navigator.bluetooth.requestDevice({
-      acceptAllDevices: true,
-      optionalServices: [SERVICE_UUID]
+      acceptAllDevices: true
     });
 
     statusText.textContent = "2. Gerät ausgewählt: " + device.name;
