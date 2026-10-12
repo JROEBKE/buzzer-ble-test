@@ -19,8 +19,14 @@ connectButton.addEventListener("click", async () => {
 
     statusText.textContent = "Suche nach Judo-Buzzer...";
 
+    /*
     const device = await navigator.bluetooth.requestDevice({
       filters: [{ name: "Judo-Buzzer" }],
+      optionalServices: [SERVICE_UUID]
+    });
+    */
+    const device = await navigator.bluetooth.requestDevice({
+      acceptAllDevices: true,
       optionalServices: [SERVICE_UUID]
     });
 
